@@ -1,0 +1,8 @@
+node_modules/
+.gemini/
+.agents/
+.agent/
+_agents/
+_agent/
+.DS_Store
+*.log
