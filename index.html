@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue City Arts and Adhesives</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">Blue City<span>Arts and Adhesives</span></a></div>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="assets/hero_luxury.png" alt="Luxury Interior" class="hero-bg">
+        <div class="hero-content fade-in-up">
+            <h1>Crafting Spaces with Heritage and Precision</h1>
+            <p>Premium Furniture, Handcrafted Art, and Industrial Adhesive Solutions — Crafted in Rajasthan, Delivered Worldwide.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn-primary">Our Products</a>
+                <a href="projects.html" class="btn-secondary">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about pattern-bg-mandala">
+        <div class="container section-flex">
+            <div class="about-text fade-in-left">
+                <h2>About Blue City Arts and Adhesives</h2>
+                <p>At Blue City Arts and Adhesives, we believe great products are not just manufactured — they are crafted. With a strong foundation in Rajasthani craftsmanship and modern manufacturing technology, we create premium furniture, artistic handicrafts, and high-performance adhesive solutions for residential, commercial, and hospitality projects. Our focus is on quality, durability, design, and long-lasting partnerships.</p>
+            </div>
+            <div class="about-visual fade-in-right">
+                <div class="jharokha-frame">
+                    <img src="assets/feature_sofa.png" alt="Rajasthani Craftsmanship">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats" style="position: relative; overflow: hidden; padding: 100px 0;">
+        <div class="stats-bg-image" style="background: url('assets/hero_luxury.png') center/cover fixed; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+        <div class="stats-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.85)); z-index: 1;"></div>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <div class="stats-grid delay-stagger">
+                <div class="stat-card fade-in-up">
+                    <h3 class="counter" data-target="10">0</h3><span>+</span>
+                    <p>Years of Craftsmanship</p>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <h3 class="counter" data-target="500">0</h3><span>+</span>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <h3 class="counter" data-target="50">0</h3><span>+</span>
+                    <p>Product Designs</p>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <h3 class="counter" data-target="100">0</h3><span>+</span>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Feature Section -->
+    <section id="projects" class="feature-section">
+        <div class="container feature-container fade-in-up">
+            <div class="feature-image">
+                <img src="assets/feature_sofa.png" alt="Designed to Inspire">
+            </div>
+            <div class="feature-content">
+                <h2>Designed to Inspire. Built to Last.</h2>
+                <p>Every piece we create combines traditional artistry, modern design, and precision manufacturing to deliver products that are timeless, durable, and elegant.</p>
+                <a href="products.html" class="btn-primary">View Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products pattern-bg-mandala">
+        <div class="container text-center">
+            <h2 class="fade-in-up">Our Masterpieces</h2>
+            <div class="carousel-container fade-in-up">
+                <button class="carousel-btn prev-btn" onclick="scrollCarousel('products-track', -1)">&#10094;</button>
+                <div class="carousel-track" id="products-track">
+                <div class="product-card">
+                    <img src="assets/product_chair.png" alt="Handcrafted Wooden Chair">
+                    <div class="product-info">
+                        <h3>Handcrafted Wooden Chair</h3>
+                        <p class="tag">Custom Made</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/product_table.png" alt="Custom Dining Table">
+                    <div class="product-info">
+                        <h3>Custom Dining Table</h3>
+                        <p class="tag">Bulk Orders Available</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/product_cabinet.png" alt="Designer Cabinet">
+                    <div class="product-info">
+                        <h3>Designer Cabinet</h3>
+                        <p class="tag">Export Quality</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/product_adhesive.png" alt="Industrial Adhesive">
+                    <div class="product-info">
+                        <h3>Industrial Adhesive</h3>
+                        <p class="tag">Industrial Grade</p>
+                    </div>
+                </div>
+            </div>
+                <button class="carousel-btn next-btn" onclick="scrollCarousel('products-track', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="expertise bg-beige">
+        <div class="container">
+            <h2 class="text-center fade-in-up">Our Expertise</h2>
+            <div class="carousel-container fade-in-up">
+                <button class="carousel-btn prev-btn" onclick="scrollCarousel('expertise-track', -1)">&#10094;</button>
+                <div class="carousel-track" id="expertise-track">
+                <div class="expertise-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/exp_residential.png" alt="Residential Projects" class="expertise-img">
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Residential Projects</h3>
+                        <p>Elevating homes with timeless furniture and art.</p>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/exp_hospitality.png" alt="Hotels & Hospitality Projects" class="expertise-img">
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Hotels & Hospitality Projects</h3>
+                        <p>Premium aesthetics for luxurious guest experiences.</p>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/exp_commercial.png" alt="Office & Commercial Projects" class="expertise-img">
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Office & Commercial Projects</h3>
+                        <p>Functional, elegant spaces for modern businesses.</p>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/exp_manufacturing.png" alt="Custom Furniture Manufacturing" class="expertise-img">
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Custom Furniture Manufacturing</h3>
+                        <p>Bespoke pieces tailored to exact specifications.</p>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/exp_adhesive.png" alt="Adhesive Solutions" class="expertise-img">
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Adhesive Solutions</h3>
+                        <p>High-performance grade for industry and carpentry.</p>
+                    </div>
+                </div>
+            </div>
+                <button class="carousel-btn next-btn" onclick="scrollCarousel('expertise-track', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials pattern-bg-mandala">
+        <div class="container text-center fade-in-up">
+            <h2>Trusted by Clients and Industry Professionals</h2>
+            <div class="testimonial-box">
+                <div class="quote-mark">"</div>
+                <p>From design to delivery, the entire process was seamless. The furniture quality and finishing were exceptional, and the adhesive products were highly reliable for our interior projects.</p>
+                <h4>— Architect / Interior Designer</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta text-center fade-in-up">
+        <div class="cta-overlay"></div>
+        <div class="container relative z-index-1">
+            <h2>Let’s Build Something Exceptional Together</h2>
+            <p>Whether you need custom furniture, handicrafts, or industrial adhesive solutions, our team is ready to work with you.</p>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pattern-bg-block">
+        <div class="footer-overlay"></div>
+        <div class="container footer-content fade-in-up">
+            <div class="footer-brand">
+                <h3>Blue City Arts and Adhesives</h3>
+                <p class="tagline">Crafted in Rajasthan. Delivered Worldwide.</p>
+                <p class="desc">Blue City Arts and Adhesives is a Rajasthan-based manufacturing company specializing in premium furniture, handicrafts, and industrial adhesive solutions. We combine traditional craftsmanship with modern manufacturing to deliver high-quality products and turnkey project solutions across India and internationally.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="export.html">Export</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blue City Arts and Adhesives. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
