@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Fix mobile viewport height (100vh on mobile includes address bar)
+    const setVH = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -9,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll for anchor links
+    // Smooth scroll for anchor links with responsive offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -18,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                const offsetTop = targetElement.offsetTop - 80;
+                // Responsive offset: 80px on large screens, 70px on mobile
+                const offset = window.innerWidth > 768 ? 80 : 70;
+                const offsetTop = targetElement.offsetTop - offset;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -112,7 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const navLinks = document.querySelector('.nav-links');
         
-        hamburger.addEventListener('click', () => {
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
@@ -124,5 +137,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('active');
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileNavbar.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    }
+
+    // Prevent body scroll when mobile menu is open
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+        const observer = new MutationObserver(() => {
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+        observer.observe(navLinks, { attributes: true, attributeFilter: ['class'] });
     }
 });
